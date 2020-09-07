@@ -71,8 +71,34 @@ function currentWeather(input) {
             var latitude = response.coord.latitude
             var longitude = response.coord.longitude
 
-            
+            // Call the UV Index API
+            uvUrl = "http://api.openweathermap.org/data/2.5/uvi?appid=2817bf3faec94fe14a480f64a719b193" + "&lat=" + latitude + "&lon=" + longitude
 
+            fetch(uvUrl, {
+                method: "GET"
+            })
+            .then(data  => data.json())
+                .then(function (result) {
+
+                    var uv = result.value
+                    var uvSpan = document.createElement("span")
+
+                    if (uv < 3) {
+                        uvSpan.className = "uvGreen"
+                        uvSpan.textContent = uv
+                    } else if (uv <= 5) {
+                        uvSpan.className = "uvYellow"
+                        uvSpan.textContent = uv
+                    } else {
+                        uvSpan.className = "uvRed"
+                        uvSpan.textContent = uv
+                    }
+
+                    var uvEl = document.createElement("p");
+                    uvEl.textContent = "UV Index: "
+                    uvEl.append(uvSpan)
+                    currentForecast.append(uvEl)
+                })
     })
 
 }
