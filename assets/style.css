@@ -82,3 +82,10 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.current-forecastBorder {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+}
