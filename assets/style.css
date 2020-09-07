@@ -1,0 +1,84 @@
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    background: whitesmoke; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: black;
+}
+
+.header{
+    margin: 15px 15px;
+    font-size: 2rem;
+    color: white;
+}
+
+.search-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-title {
+    font-size: 1.4rem;
+    margin: 10px;
+}
+
+.search-location {
+    display: flex;
+    margin: 10px;
+}
+
+.input {
+    width: 18%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.btn {
+    background: blue;
+    color: white;
+    border-radius: 3px;
+    border-color: lightblue;
+}
+
+.fa-search {
+    background: transparent;
+}
+
+.previous-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.forecast-content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.current-forecast {
+    background-color: white;
+    border: solid lightgray 1px;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.forecast-title {
+    margin: 15px;
+}
+
+.future-forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
