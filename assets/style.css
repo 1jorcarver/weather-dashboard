@@ -7,6 +7,8 @@ body {
 
 .container {
     background: whitesmoke; 
+    height: auto;
+    min-height: 100%;
 }
 
 .navbar {
@@ -24,6 +26,8 @@ body {
 .search-content {
     display: flex;
     flex-direction: column;
+    width: 20%;
+    min-height: 100%;
 }
 
 .app-title {
@@ -37,7 +41,7 @@ body {
 }
 
 .input {
-    width: 18%;
+    width: 70%;
     padding: 12px;
     font-size: 1rem;
 }
@@ -61,7 +65,8 @@ body {
 .forecast-content {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 60%;
+    height: auto;
 }
 
 .current-forecast {
@@ -73,7 +78,10 @@ body {
 }
 
 .forecast-title {
-    margin: 15px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 75%;
 }
 
 .future-forecast {
@@ -81,6 +89,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 70%;
+    margin: auto;
 }
 
 .current-forecastBorder {
@@ -88,4 +98,11 @@ body {
     width: 80%;
     margin: auto;
     padding: 15px;
+}
+
+.
+
+.heading {
+    display: flex;
+    flex-direction: row;
 }

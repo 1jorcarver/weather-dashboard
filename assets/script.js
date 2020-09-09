@@ -56,7 +56,7 @@ function currentWeather(input) {
 
             var cityName = response.name
             var cityEl = document.createElement("h2")
-            cityEl.textContent = "cityName " + " " + "(" + today + ")"
+            cityEl.textContent = cityName + " " + "(" + today + ")"
 
             var heading = document.createElement("div")
             heading.className = "heading"
@@ -65,7 +65,7 @@ function currentWeather(input) {
             currentForecast.className = "current-forecastBorder"
 
             currentForecast.append(heading)
-            currentForecast.append(temp)
+            currentForecast.append(tempEl)
             currentForecast.append(humidityEl)
             currentForecast.append(speedEl)
 
@@ -73,7 +73,7 @@ function currentWeather(input) {
             var longitude = response.coord.longitude
 
             // Call the UV Index API
-            uvUrl = "https://api.openweathermap.org/data/2.5/uvi?" + "&lat=" + latitude + "&lon=" + longitude + "&appid=2817bf3faec94fe14a480f64a719b193"
+            uvUrl = "https://api.openweathermap.org/data/2.5/uvi?lat=" + latitude + "&lon=" + longitude + "&APPID=2817bf3faec94fe14a480f64a719b193"
 
             fetch(uvUrl, {
                 method: "GET"
@@ -94,7 +94,7 @@ function currentWeather(input) {
                         uvSpan.textContent = uv
                     }
 
-                    var uvEl = document.createElement("p");
+                    var uvEl = document.createElement("p")
                     uvEl.textContent = "UV Index: "
                     uvEl.append(uvSpan)
                     currentForecast.append(uvEl)
@@ -113,6 +113,10 @@ function currentWeather(input) {
 
             // counter for the date
             d = 0
+
+            var date = document.createElement("h2")
+            date.textContent = "5-Day Forecast:"
+            forecastTitle.append(date)
 
             for (let i = 6; i < response.list.length; i += 8) {
 
